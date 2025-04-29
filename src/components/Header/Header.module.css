@@ -2,7 +2,6 @@
   background: linear-gradient(135deg, #3A4F7A 0%, #2C3E50 100%); /* Gradiente azul marinho */
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .navigation {
@@ -100,22 +99,24 @@
   width: 100%;
 }
 
+/* Imagem como elemento absoluto e independente */
 .headerImageContainer {
-  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 70vh;
+  width: 40%;
   display: flex;
   justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-  overflow: hidden; /* Garante que a imagem não ultrapasse o container */
+  z-index: 1;
+  pointer-events: none;
 }
 
 .headerImage {
-  max-width: 60%;
-  height: auto;
-  display: block;
-  margin-bottom: -4px;
-  object-fit: contain; /* Mantém a proporção da imagem */
-  aspect-ratio: auto; /* Preserva a proporção original da imagem */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: right center;
 }
 
 .container {
@@ -177,39 +178,35 @@
 
 @media (max-width: 768px) {
   .navigation {
-    padding: 2px 0;
-    height: 40px;
+    padding: 0 20px;
+    height: 45px;
   }
 
   .navContainer {
     display: flex;
-    justify-content: flex-end; /* Alinha à direita para o texto */
+    justify-content: center;
     align-items: center;
-    padding: 0 10px;
-    position: relative;
+    width: 100%;
+    padding-top: 10px; /* Adicionado para baixar o texto */
   }
 
   .brandText {
-    font-size: 1.1rem;
-    line-height: 40px;
-    padding-right: 10px; /* Espaçamento à direita */
-    order: 2; /* Move o texto para o final do flex container */
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
   }
 
   .logoCenter {
     position: absolute;
-    left: 4vh; /* Posiciona à esquerda com espaçamento */
-    top: 100%;
-    margin-top: -6vh;
-    transform: none;
-    order: 1; /* Move o logo para o início do flex container */
+    left: 10px;
+    top: 45px;
+    display: flex;
+    align-items: center;
   }
-  
+
   .logoImg {
-    width: 10vh;
-    height: 10vh;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    width: 35px;
+    height: 35px;
   }
 
   .navLinks {
@@ -218,13 +215,13 @@
 }
 
 @media (max-width: 480px) {
-  .brandText {
-    font-size: 1rem;
-  }
-  
   .logoImg {
-    width: 10vh; /* Mantém o mesmo tamanho em telas menores */
-    height: 10vh;
+    width: 80px; /* Ainda mantém um bom tamanho */
+    height: 80px;
+  }
+
+  .brandText {
+    font-size: 1.3rem;
   }
 }
 

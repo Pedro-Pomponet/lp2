@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Header.module.css';
-import headerImage from '../../assets/header.png';
 import logoImage from '../../assets/logo.png';
 
 const Header: React.FC = () => {
@@ -22,14 +21,6 @@ const Header: React.FC = () => {
           </ul>
         </div>
       </nav>
-      
-      <div className={styles.headerImageContainer}>
-        <img 
-          src={headerImage} 
-          alt="Economizap Header" 
-          className={styles.headerImage} 
-        />
-      </div>
     </header>
   );
 };

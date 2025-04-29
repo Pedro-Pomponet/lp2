@@ -9,35 +9,37 @@
   padding: 0 20px;
 }
 
-.heading {
-  text-align: center;
-  margin-bottom: 60px;
+.contentWrapper {
+  display: flex;
+  gap: 240px;
+  align-items: center;
+  padding-left: 5%;
+  justify-content: space-between;
 }
 
-.heading h2 {
+.textContent {
+  flex: 1;
+  max-width: 400px;
+  margin-top: 0;
+}
+
+.textContent h2 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 16px;
+  color: #3A4F7A;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.heading p {
+.textContent p {
   font-size: 1.1rem;
   color: #666;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.tablesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .tableWrapper {
-  flex: 1;
-  min-width: 300px;
-  max-width: 400px;
+  flex: 0 1 600px;
+  margin-left: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -50,7 +52,7 @@
 }
 
 .featureTable th {
-  background-color: #2DBB54;
+  background-color: #3A4F7A;
   color: white;
   padding: 15px;
   font-size: 1.2rem;
@@ -58,47 +60,124 @@
 }
 
 .featureTable td {
-  padding: 15px;
+  padding: 15px 20px;
   border-bottom: 1px solid #eee;
-}
-
-.featureTable tr:last-child td {
-  border-bottom: none;
+  text-align: left;
 }
 
 .iconCell {
-  width: 60px;
+  width: 40px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
+  padding-top: 17px;
+  padding-right: 0;
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  color: #2DBB54;
+  color: #3A4F7A;
 }
 
 .featureTable h3 {
   margin: 0 0 5px 0;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.2rem;
+  color: #3A4F7A;
+  text-align: left;
 }
 
 .featureTable p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #666;
+  line-height: 1.4;
+  text-align: left;
 }
 
-@media (max-width: 768px) {
-  .tablesContainer {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 968px) {
+  .features {
+    padding: 10px 0;
   }
-  
-  .tableWrapper {
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 20px;
+
+  .contentWrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .textContent {
+    max-width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+  }
+
+  .textContent h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* Estilo para a seção de CTA */
+.ctaSection {
+  margin-top: 60px;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #3A4F7A 0%, #2C3E50 100%);
+  border-radius: 10px;
+  color: white;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaButton {
+  background-color: #2DBB54;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background-color: #25A348;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(45, 187, 84, 0.3);
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+  .ctaSection {
+    margin-top: 40px;
+    padding: 30px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+
+  .ctaText {
+    font-size: 1.1rem;
   }
 } 
