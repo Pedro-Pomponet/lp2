@@ -35,7 +35,7 @@ const Pricing: React.FC = () => {
         </div>
         <div className={styles.plans}>
           <div className={styles.planCard}>
-            <span className={styles.planLabel + ' ' + styles.monthly}>PLANO MENSAL</span>
+            <span className={styles.planLabel}>PLANO MENSAL</span>
             <h3>Plano Mensal</h3>
             <div className={styles.price}>R$ 19.9<span className={styles.per}>/mês</span></div>
             <button className={styles.monthlyBtn}>
@@ -43,12 +43,12 @@ const Pricing: React.FC = () => {
             </button>
           </div>
           <div className={`${styles.planCard} ${styles.popular}`}>
-            <span className={styles.planLabel + ' ' + styles.annual}>MAIS POPULAR</span>
+            <span className={styles.planLabel}>MAIS POPULAR</span>
             <h3>Plano Anual</h3>
             <div className={styles.price}>R$ 178.8<span className={styles.per}>/ano</span></div>
             <div className={styles.equivalent}>Equivalente a R$ 14.9/mês</div>
             <button className={styles.annualBtn}>
-              <span role="img" aria-label="Cartão">💳</span> Continuar com Plano Anual
+              <span role="img" aria-label="Coroa">👑</span> Continuar com Plano Anual
             </button>
           </div>
         </div>

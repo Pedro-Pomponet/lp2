@@ -1,47 +1,26 @@
 .pricing {
   background: #f8f7f3;
-  padding: 60px 0 40px 0;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .pricingGrid {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  background: #fff;
-  border-radius: 28px;
-  box-shadow: 0 8px 32px rgba(45, 187, 84, 0.10);
-  padding: 48px 48px 32px 48px;
-  max-width: 1100px;
-  margin: 0 auto;
-  align-items: stretch;
+  max-width: 600px;
   width: 100%;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .benefits {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 2px 16px rgba(45, 187, 84, 0.08);
-  padding: 36px 28px;
-  min-width: 260px;
-  max-width: 320px;
-  min-height: 340px;
-  height: 100%;
+  margin-bottom: 32px;
 }
 
 .benefitsTitle {
-  font-size: 1.15rem;
-  color: #2DBB54;
+  font-size: 1.25rem;
+  color: #23263A;
   font-weight: 700;
-  margin-bottom: 18px;
-  text-align: left;
+  margin-bottom: 14px;
 }
 
 .benefits ul {
@@ -50,123 +29,110 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 12px;
 }
 
 .benefits li {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 1.13rem;
-  color: #23263A;
-  font-weight: 500;
+  gap: 10px;
+  color: #333;
+  font-size: 1rem;
 }
 
 .icon {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
   color: #2DBB54;
-  flex-shrink: 0;
+  font-size: 1.2rem;
 }
 
 .plans {
-  flex: 2;
   display: flex;
-  flex-direction: row;
-  gap: 32px;
-  align-items: stretch;
-  justify-content: center;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .planCard {
-  min-width: 320px;
-  max-width: 380px;
-  flex: 1;
-  border-radius: 20px;
-  box-shadow: 0 2px 16px rgba(45, 187, 84, 0.08);
   background: #fff;
-  margin: 0;
-  padding: 48px 28px 40px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: none;
-  transition: box-shadow 0.2s, border 0.2s;
-  min-height: 340px;
-  height: 100%;
-  justify-content: space-between;
+  border-radius: 22px;
+  padding: 32px 20px 28px 20px;
+  text-align: center;
+  box-shadow: 0 6px 32px rgba(45, 187, 84, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+  margin-bottom: 0;
+  transition: transform 0.18s, box-shadow 0.18s;
 }
 
-.planCard.popular {
+.planCard:hover {
+  transform: translateY(-3px) scale(1.025);
+  box-shadow: 0 12px 36px rgba(45, 187, 84, 0.13), 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.popular {
   border: 2.5px solid #23263A;
-  box-shadow: 0 8px 32px rgba(35, 38, 58, 0.10);
-  background: #f8f7f3;
+  box-shadow: 0 8px 32px rgba(35, 38, 58, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+  position: relative;
   z-index: 2;
 }
 
 .planLabel {
+  background: #2DBB54;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
-  border-radius: 12px;
-  padding: 4px 16px;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
   display: inline-block;
   letter-spacing: 1px;
 }
 
-.monthly {
-  background: #2DBB54;
-  color: #fff;
-}
-
-.annual {
+.popular .planLabel {
   background: #23263A;
-  color: #fff;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #23263A;
-  margin: 0 0 8px 0;
-  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-weight: 800;
 }
 
 .price {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   color: #2DBB54;
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-weight: 800;
+  margin: 12px 0 2px 0;
+  letter-spacing: -1px;
 }
 
 .per {
-  font-size: 1rem;
-  color: #23263A;
+  font-size: 1.1rem;
+  color: #666;
   font-weight: 400;
 }
 
 .equivalent {
   color: #2DBB54;
   font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .monthlyBtn, .annualBtn {
   width: 100%;
   border: none;
   border-radius: 8px;
-  padding: 12px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 10px;
+  padding: 14px 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  box-shadow: 0 2px 8px rgba(45, 187, 84, 0.07);
 }
 
 .monthlyBtn {
@@ -176,62 +142,41 @@ h3 {
 
 .monthlyBtn:hover {
   background: #25A348;
+  box-shadow: 0 4px 16px rgba(45, 187, 84, 0.13);
 }
 
 .annualBtn {
   background: #23263A;
-  color: #fff;
+  color: #FFD600;
 }
 
 .annualBtn:hover {
   background: #1a1c2a;
+  color: #ffe066;
+  box-shadow: 0 4px 16px rgba(35, 38, 58, 0.13);
 }
 
 .security {
-  margin-top: 32px;
-  color: #23263A;
-  font-size: 1.08rem;
+  margin-top: 28px;
   display: flex;
   align-items: center;
   gap: 8px;
-  opacity: 0.85;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .pricingGrid {
-    flex-direction: column;
-    gap: 32px;
-    padding: 32px 8px 24px 8px;
-    max-width: 98vw;
-  }
-  .plans {
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-  }
-  .benefits {
-    max-width: 100%;
-    min-width: 0;
-    margin-bottom: 0;
-    box-shadow: 0 2px 8px rgba(45, 187, 84, 0.06);
-    padding: 24px 12px;
-    min-height: unset;
-  }
-  .planCard {
-    min-width: 0;
-    max-width: 100%;
-    padding: 32px 12px 24px 12px;
-    min-height: unset;
-  }
+  color: #666;
+  font-size: 1rem;
+  opacity: 0.92;
 }
 
 @media (max-width: 480px) {
   .pricing {
-    padding: 24px 0 12px 0;
+    padding: 20px 6px;
   }
-  .security {
-    font-size: 0.98rem;
-    margin-top: 18px;
+  .planCard {
+    padding: 18px 6px 16px 6px;
+  }
+  .price {
+    font-size: 1.7rem;
+  }
+  .plans {
+    gap: 18px;
   }
 } 

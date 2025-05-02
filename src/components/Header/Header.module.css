@@ -1,237 +1,45 @@
+/* Arquivo limpo para recomeçar do zero */ 
+
 .header {
-  background-color: #2DBB54; /* Verde do Economizap */
-  width: 100%;
-  position: relative;
-}
-
-.navigation {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  padding: 8px 0; /* Reduzido de 15px para 8px */
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navContainer {
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-}
-
-.brandText {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-  margin-left: 2vh; /* Reduzido para 2vh para evitar que ultrapasse a borda */
-  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-  overflow: hidden; /* Esconde qualquer texto que ultrapasse o container */
-  text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
-}
-
-.logoCenter {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 100%; /* Posiciona o topo do logo na base da navegação */
-  margin-top: -6vh; /* Ajustado para -6vh para subir um pouco o logo */
+  width: 100vw;
+  background: #2DBB54; /* mesma cor do Hero */
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 101; /* Garante que o logo fique acima de outros elementos */
+  justify-content: space-between; /* Espaça os elementos */
+  height: 56px;
+  box-sizing: border-box;
+  padding: 0 18px; /* Espaço nas laterais */
+  position: relative; /* Para posicionar o overlay */
 }
 
-.logoImg {
-  width: 17vh; /* Aumentado de 15vh para 17vh */
-  height: 17vh; /* Aumentado de 15vh para 17vh */
-  object-fit: contain;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* Adiciona uma sombra suave */
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-}
-
-/* Menu desktop */
-.navLinks {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-right: 1vh;
-}
-
-.navLinks li {
-  margin-left: 30px;
-}
-
-.navLinks a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.navLinks a:hover {
-  opacity: 0.8;
-}
-
-.navLinks a::after {
+/* Camada semi-transparente para clarear o fundo */
+.header::before {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  bottom: -5px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-.navLinks a:hover::after {
-  width: 100%;
-}
-
-/* Imagem como elemento absoluto e independente */
-.headerImageContainer {
-  position: absolute;
-  right: 0;
   top: 0;
-  height: 70vh;
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.headerImage {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  object-position: right center;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-.logoContainer {
-  display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.25); /* Filtro branco semi-transparente */
+  z-index: 1; /* Acima do background, abaixo do conteúdo */
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
-  margin-right: 1rem;
+  height: 60px; /* Aumentado de 44px para 60px */
+  width: 60px; /* Aumentado de 44px para 60px */
   object-fit: contain;
+  position: absolute;
+  left: 10px; /* Posiciona no canto esquerdo */
+  top: 6px; /* Ajusta verticalmente */
+  z-index: 2; /* Acima do filtro */
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.heroContent {
-  max-width: 600px;
-}
-
-.heroTitle {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  line-height: 1.2;
-}
-
-.ctaButton {
-  background-color: #E94560; /* Rosa/vermelho vibrante */
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.ctaButton:hover {
-  background-color: #D63553; /* Rosa/vermelho mais escuro */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 768px) {
-  .navigation {
-    padding: 0 20px;
-    height: 45px;
-  }
-
-  .navContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 10px; /* Adicionado para baixar o texto */
-  }
-
-  .brandText {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
-  }
-
-  .logoCenter {
-    position: absolute;
-    left: 10px;
-    top: 45px;
-    display: flex;
-    align-items: center;
-  }
-
-  .logoImg {
-    width: 35px;
-    height: 35px;
-  }
-
-  .navLinks {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .logoImg {
-    width: 80px; /* Ainda mantém um bom tamanho */
-    height: 80px;
-  }
-
-  .brandText {
-    font-size: 1.3rem;
-  }
-}
-
-.logoNav {
-  display: flex;
-  align-items: center;
-}
-
-.logoText {
+.brand {
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  letter-spacing: -0.5px;
+  margin: 0 auto; /* Centraliza o texto */
+  position: relative;
+  z-index: 2; /* Acima do filtro */
 } 

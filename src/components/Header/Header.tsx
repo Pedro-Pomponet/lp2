@@ -1,28 +1,11 @@
-import React from 'react';
 import styles from './Header.module.css';
-import logoImage from '../../assets/logo.png';
+import logo from '../../assets/logo.png'; // ajuste o caminho se necessário
 
-const Header: React.FC = () => {
+export default function Header() {
   return (
     <header className={styles.header}>
-      <nav className={styles.navigation}>
-        <div className={styles.navContainer}>
-          <div className={styles.brandText}>Economizap</div>
-          
-          <div className={styles.logoCenter}>
-            <img src={logoImage} alt="Economizap Logo" className={styles.logoImg} />
-          </div>
-
-          <ul className={styles.navLinks}>
-            <li><a href="#features">Recursos</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-        </div>
-      </nav>
+      <img src={logo} alt="Logo Economizap" className={styles.logo} />
+      <span className={styles.brand}>Economizap</span>
     </header>
   );
-};
-
-export default Header; 
+} 

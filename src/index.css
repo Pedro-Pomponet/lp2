@@ -5,9 +5,108 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-x: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  html, body, #root {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative;
+  }
+  .container, .section, .cardsGrid, .plans, .pricingGrid {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  [style*="position: absolute"], [style*="position:absolute"] {
+    max-width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+img, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flex-container, .cardsGrid, .plans, .pricingGrid {
+  min-width: 0;
+}
+
+/* Força layout mobile em todas as larguras */
+.container, .section, .cardsGrid, .plans, .pricingGrid, .testimonials .cards {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+}
+
+.card, .planCard, .testimonials .card, .features .card {
+  width: 100% !important;
+  max-width: 400px !important;
+  min-width: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Força header e hero em modo mobile em todas as larguras */
+header, .header, .navbar, .nav, .menu {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.hero, .heroContainer, .hero-content, .heroContent, .banner, .mainBanner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.hero img, .heroContainer img, .banner img, .mainBanner img {
+  max-width: 90vw !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
+
+.hero button, .heroContainer button, .banner button, .mainBanner button {
+  width: 100% !important;
+  max-width: 350px !important;
+  margin: 16px 0 !important;
 }
