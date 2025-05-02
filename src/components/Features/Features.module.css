@@ -1,6 +1,6 @@
 .features {
-  padding: 80px 0;
-  background-color: white;
+  background: transparent;
+  padding: 32px 0 0 0;
 }
 
 .container {
@@ -17,43 +17,51 @@
 }
 
 .cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 6px;
 }
 
 .card {
-  background: white;
+  display: flex;
+  align-items: center;
+  background: #fff;
   border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(45, 187, 84, 0.15);
+  box-shadow: 0 2px 12px 0 rgba(60, 60, 60, 0.07);
+  padding: 12px 12px;
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
+  gap: 12px;
 }
 
 .cardIcon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
-  color: #2DBB54;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: #21916b;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .card h3 {
-  color: #2DBB54;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  margin: 0;
+  font-size: 1rem;
+  color: #137c4b;
+  font-weight: 700;
 }
 
 .card p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 1rem;
+  margin: 0;
+  font-size: 0.89rem;
+  color: #234;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

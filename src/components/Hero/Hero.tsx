@@ -1,23 +1,14 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import headerImage from '../../assets/header.png';
+import HeroButton from "./HeroButton";
+import HeroText from "./HeroText";
 
 const Hero: React.FC = () => {
   return (
     <section className={styles.hero}>
-      <div className={styles.leftGrid}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.title}>Pronto para Transformar suas Finanças?</h1>
-          <p className={styles.description}>
-            Junte-se a milhares de pessoas que já estão economizando e organizando 
-            suas finanças de forma inteligente com o Economizap.
-          </p>
-          <a href="#signup" className={styles.ctaButton}>
-            Comece Agora
-          </a>
-        </div>
-      </div>
-
+      <HeroText />
+      <HeroButton />
       <div className={styles.rightGrid}>
         <img 
           src={headerImage} 

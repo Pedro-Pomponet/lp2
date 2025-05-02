@@ -11,8 +11,15 @@ const Smartphones: React.FC = () => {
         <div className={styles.phoneContainer}>
           <div className={styles.phone}>
             <h3>Painel profissional</h3>
-            <p>Tenha acesso ao seu painel financeiro onde vai avaliar as informações com gráficos e métricas para tomar decisões precisas e manter-se sempre preparado para manter seus compromissos.</p>
-            <img src={economizaAi1} alt="Painel profissional" />
+            <p>
+              Tenha acesso ao seu painel financeiro direto no celular ou computador, com todas as suas informações sempre organizadas. E o melhor: você não precisa preencher nada manualmente – seu assessor no WhatsApp faz tudo por você!
+            </p>
+            <ul className={styles.checkList}>
+              <li>Gráficos de fluxo de caixa</li>
+              <li>Organização automatizada</li>
+              <li>Experiência prática e acessível</li>
+            </ul>
+            <img src={economizaAi1} alt="Painel profissional" loading="lazy" />
           </div>
 
           <div className={styles.phone}>
