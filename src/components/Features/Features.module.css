@@ -1,6 +1,6 @@
 .features {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 .container {
@@ -9,116 +9,74 @@
   padding: 0 20px;
 }
 
-.contentWrapper {
-  display: flex;
-  gap: 240px;
-  align-items: center;
-  padding-left: 5%;
-  justify-content: space-between;
-}
-
-.textContent {
-  flex: 1;
-  max-width: 400px;
-  margin-top: 0;
-}
-
-.textContent h2 {
+.sectionTitle {
   font-size: 2.5rem;
-  color: #3A4F7A;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  color: #2DBB54;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.textContent p {
-  font-size: 1.1rem;
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(45, 187, 84, 0.15);
+}
+
+.cardIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  color: #2DBB54;
+}
+
+.card h3 {
+  color: #2DBB54;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.card p {
   color: #666;
   line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.tableWrapper {
-  flex: 0 1 600px;
-  margin-left: auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: white;
-}
-
-.featureTable {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.featureTable th {
-  background-color: #3A4F7A;
-  color: white;
-  padding: 15px;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.featureTable td {
-  padding: 15px 20px;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-}
-
-.iconCell {
-  width: 40px;
-  text-align: center;
-  vertical-align: top;
-  padding-top: 17px;
-  padding-right: 0;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  color: #3A4F7A;
-}
-
-.featureTable h3 {
-  margin: 0 0 5px 0;
-  font-size: 1.2rem;
-  color: #3A4F7A;
-  text-align: left;
-}
-
-.featureTable p {
-  margin: 0;
   font-size: 1rem;
-  color: #666;
-  line-height: 1.4;
-  text-align: left;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .features {
-    padding: 10px 0;
+    padding: 40px 0;
   }
 
-  .contentWrapper {
-    flex-direction: column;
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding-left: 0;
   }
 
-  .textContent {
-    max-width: 100%;
-    padding: 0 20px;
-    margin-bottom: 10px;
+  .card {
+    padding: 20px;
   }
 
-  .textContent h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-
-  .textContent p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+  .card h3 {
+    font-size: 1.2rem;
   }
 }
 

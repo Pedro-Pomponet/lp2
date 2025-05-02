@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Features.module.css';
 
-// Importando imagens SVG
+// Importando ícones
 import walletIcon from '../../assets/icons/wallet.svg';
 import bellIcon from '../../assets/icons/bell.svg';
 import invoiceIcon from '../../assets/icons/invoice.svg';
@@ -13,79 +13,42 @@ const Features: React.FC = () => {
   return (
     <section id="features" className={styles.features}>
       <div className={styles.container}>
-        <div className={styles.contentWrapper}>
-          <div className={styles.textContent}>
-            <h2>Que tal finalmente organizar sua vida financeira?</h2>
-            <p>
-              Simplifique suas contas, economize dinheiro e prospere sem abrir planilhas 
-              e direto no WhatsApp.
-            </p>
+        <h2 className={styles.sectionTitle}>Funcionalidades</h2>
+        <div className={styles.cardsGrid}>
+          <div className={styles.card}>
+            <img src={walletIcon} alt="Orçamento" className={styles.cardIcon} />
+            <h3>Gerencie seu orçamento</h3>
+            <p>Categorize seus gastos de forma simples e eficiente</p>
           </div>
 
-          <div className={styles.tableWrapper}>
-            <table className={styles.featureTable}>
-              <thead>
-                <tr>
-                  <th colSpan={2}>Funcionalidades</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className={styles.iconCell}>
-                    <img src={walletIcon} alt="Carteira" className={styles.icon} />
-                  </td>
-                  <td>
-                    <h3>Gerencie seu orçamento</h3>
-                    <p>Categorize seus gastos de forma simples e eficiente</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.iconCell}>
-                    <img src={bellIcon} alt="Sino" className={styles.icon} />
-                  </td>
-                  <td>
-                    <h3>Receba lembretes</h3>
-                    <p>Nunca mais perca um prazo de pagamento</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.iconCell}>
-                    <img src={invoiceIcon} alt="Fatura" className={styles.icon} />
-                  </td>
-                  <td>
-                    <h3>Emita boletos</h3>
-                    <p>Gere e gerencie cobranças de forma rápida e segura</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.iconCell}>
-                    <img src={microphoneIcon} alt="Microfone" className={styles.icon} />
-                  </td>
-                  <td>
-                    <h3>Registro por Voz</h3>
-                    <p>Diga adeus às anotações: fale e o Economizap registra tudo automaticamente</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.iconCell}>
-                    <img src={chartPieIcon} alt="Gráfico" className={styles.icon} />
-                  </td>
-                  <td>
-                    <h3>Categorização Inteligente</h3>
-                    <p>Identifique seus maiores gastos em segundos</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.iconCell}>
-                    <img src={chartLineIcon} alt="Gráfico" className={styles.icon} />
-                  </td>
-                  <td>
-                    <h3>Relatórios Automáticos</h3>
-                    <p>Saiba exatamente onde seu dinheiro está indo com insights personalizados</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div className={styles.card}>
+            <img src={bellIcon} alt="Lembretes" className={styles.cardIcon} />
+            <h3>Receba lembretes</h3>
+            <p>Nunca mais perca um prazo de pagamento</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={invoiceIcon} alt="Boletos" className={styles.cardIcon} />
+            <h3>Emita boletos</h3>
+            <p>Gere e gerencie cobranças de forma rápida e segura</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={microphoneIcon} alt="Voz" className={styles.cardIcon} />
+            <h3>Registro por Voz</h3>
+            <p>Diga adeus às anotações: fale e o Economizap registra tudo automaticamente</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={chartPieIcon} alt="Categorização" className={styles.cardIcon} />
+            <h3>Categorização Inteligente</h3>
+            <p>Identifique seus maiores gastos em segundos</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={chartLineIcon} alt="Relatórios" className={styles.cardIcon} />
+            <h3>Relatórios Automáticos</h3>
+            <p>Saiba exatamente onde seu dinheiro está indo com insights personalizados</p>
           </div>
         </div>
       </div>

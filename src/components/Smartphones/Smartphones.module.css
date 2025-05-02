@@ -25,7 +25,9 @@
 .phone img {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .phone h3 {
@@ -40,29 +42,63 @@
   line-height: 1.6;
 }
 
+/* Tablets e telas médias */
 @media (max-width: 968px) {
   .phoneContainer {
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 80px;
   }
 
   .phone {
-    max-width: 280px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .phone h3 {
+    font-size: 1.8rem;
+  }
+
+  .phone p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 
+/* Dispositivos móveis */
 @media (max-width: 480px) {
   .smartphones {
     padding: 40px 0;
   }
 
   .phone {
-    max-width: 240px;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .phone img {
+    border-radius: 25px;
   }
 
   .phone h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .phone p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .phoneContainer {
+    gap: 60px;
+  }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 320px) {
+  .phone h3 {
+    font-size: 1.2rem;
   }
 
   .phone p {
