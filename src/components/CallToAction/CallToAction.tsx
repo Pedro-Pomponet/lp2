@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CallToAction.module.css';
-import header from '../../assets/header.PNG';
+import header from '../../assets/images/header.PNG';
 
 const CallToAction: React.FC = () => {
   return (
