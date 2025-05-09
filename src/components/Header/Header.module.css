@@ -1,18 +1,12 @@
 /* Arquivo limpo para recomeçar do zero */ 
 
 .header {
-  width: 100vw;
-  background: #2DBB54; /* mesma cor do Hero */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Espaça os elementos */
-  height: 56px;
-  box-sizing: border-box;
-  padding: 0 18px; /* Espaço nas laterais */
-  position: relative; /* Para posicionar o overlay */
+  background-color: #2DBB54;
+  position: relative;
+  overflow: visible;
+  padding: 0;
 }
 
-/* Camada semi-transparente para clarear o fundo */
 .header::before {
   content: '';
   position: absolute;
@@ -20,26 +14,121 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.25); /* Filtro branco semi-transparente */
-  z-index: 1; /* Acima do background, abaixo do conteúdo */
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  gap: 0;
+}
+
+.logoContainer {
+  margin: 0;
+  line-height: 0;
 }
 
 .logo {
-  height: 60px; /* Aumentado de 44px para 60px */
-  width: 60px; /* Aumentado de 44px para 60px */
-  object-fit: contain;
-  position: absolute;
-  left: 10px; /* Posiciona no canto esquerdo */
-  top: 6px; /* Ajusta verticalmente */
-  z-index: 2; /* Acima do filtro */
+  height: 180px;
+  width: auto;
+  display: block;
 }
 
-.brand {
-  color: #fff;
-  font-size: 1.5rem;
+.heroText {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
-  margin: 0 auto; /* Centraliza o texto */
-  position: relative;
-  z-index: 2; /* Acima do filtro */
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  display: block;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 0 200px;
+  }
+  
+  .logoContainer {
+    height: 50px;
+  }
+  
+  .logo {
+    height: 150px;
+  }
+  
+  .heroTitle {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.3rem;
+  }
+
+  .wave {
+    height: 100px;
+  }
+
+  .heroText {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 0 180px;
+  }
+  
+  .logoContainer {
+    height: 40px;
+  }
+  
+  .logo {
+    height: 120px;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .wave {
+    height: 80px;
+  }
 } 

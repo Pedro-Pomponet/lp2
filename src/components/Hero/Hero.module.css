@@ -1,292 +1,137 @@
 .hero {
-  background: #c2bdb0;
-  min-height: 45vh;
+  background-color: #2DBB54;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0;
-  align-items: center;
-  overflow: hidden;
-}
-
-.logoCenter {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
-  z-index: 3;
-}
-
-.leftGrid {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  padding: 0 40px; /* Padding uniforme */
+  align-items: center;
+  padding: 40px 0;
+  overflow: visible;
+  margin-top: -1px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
   z-index: 2;
 }
 
-.rightGrid {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  pointer-events: none;
-}
-
 .heroContent {
-  position: absolute;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
   text-align: center;
-  pointer-events: none; /* impede clique em áreas vazias, mas o botão ainda será clicável */
+  z-index: 2;
+  position: relative;
 }
 
-.title {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-  line-height: 1.25;
-  word-break: break-word;
-  max-width: 90vw;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.10);
-}
-
-.description {
-  font-size: 0.92rem;
-  margin-bottom: 18px;
-  line-height: 1.45;
-  color: #f3f3f3;
-  max-width: 92vw;
-}
-
-.ctaButton {
-  background-color: #2DBB54; /* Verde do header */
-  color: #fff;
-  border: none;
-  padding: 9px 28px;
-  font-size: 1rem;
-  border-radius: 50px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  box-shadow: 0 2px 8px rgba(45, 187, 84, 0.15);
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.2s, transform 0.2s;
-  pointer-events: auto;
-}
-
-.ctaButton:hover {
-  background-color: #25A348; /* Verde um pouco mais escuro para o hover */
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(45, 187, 84, 0.25);
-}
-
-.heroImage {
-  height: 38vh;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: 0;
-  max-width: none;
-  max-height: 100%;
-  display: block;
-}
-
-.heroTextWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.heroText {
+  margin-bottom: 30px;
+  max-width: 800px;
 }
 
 .heroTitle {
-  font-size: 0.85rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
-  line-height: 1.05;
-  margin-bottom: 0.5px;
-  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .heroSubtitle {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: #fff;
-  line-height: 1.05;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.heroActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  max-width: 500px;
+  position: relative;
+  z-index: 3;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 32vh;
-    grid-template-columns: 1fr;
-    padding-top: 0;
-    align-items: stretch;
-  }
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e6c3d;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(14, 108, 61, 0.3);
+}
 
-  .leftGrid {
-    position: absolute;
-    top: 30%; /* Reduzido de 50% para 30% para subir o texto */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0;
-    margin: 0;
-    width: 90%;
-    z-index: 2;
-  }
+.ctaButton:hover {
+  background-color: #095230;
+}
 
+.whatsappIcon {
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+.usersCount {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
   .heroContent {
-    max-width: 100%;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-bottom: 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-
-  .title {
-    font-size: 1.1rem;
-    text-align: left;
-  }
-
-  .description {
-    text-align: left;
-  }
-
-  .ctaButton {
-    padding: 5px 12px;
-    font-size: 0.7rem;
-  }
-
-  .hero {
-    overflow: hidden;
-    position: relative;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 18vh;
-  }
-
-  .leftGrid {
-    top: 25%; /* Sobe ainda mais em telas menores */
-  }
-
-  .heroImage {
-    height: 16vh;
-    margin-bottom: 0;
-  }
-
-  .title {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    position: relative;
-    min-height: 22vh; /* mais compacto, ajuste conforme preferir */
-  }
-  .description {
-    position: absolute;
-    left: 50%;
-    bottom: 50px; /* Ajuste para ficar acima do botão */
-    transform: translateX(-50%);
-    width: 90vw;
-    max-width: 90vw;
-    text-align: left;
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.3;
-    background: none;
-    box-shadow: none;
-    padding: 0 10px;
-  }
-  .ctaButton {
-    position: absolute;
-    left: 50%;
-    bottom: 63px; /* subiu 3px */
-    transform: translateX(-50%);
-    z-index: 10;
-    margin: 0 !important;
-    padding-bottom: 4px !important;
-    padding-top: 4px !important;
-  }
-  .heroTextWrapper {
-    position: absolute;
-    left: 50%;
-    bottom: 103px; /* subiu 3px */
-    transform: translateX(-50%);
-    width: 80vw;
-    max-width: 80vw;
-    z-index: 10;
-    margin: 0;
-    padding: 0 10px;
-    background: none;
-    box-shadow: none;
-  }
-  .heroTitle, .heroSubtitle {
+  
+  .heroActions {
+    max-width: 500px;
+    align-items: center;
     text-align: center;
   }
 }
 
-header, .header {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  left: 0;
-  right: 0;
-  position: relative;
-  margin: 0 auto;
-  box-sizing: border-box;
+@media (max-width: 767px) {
+  .hero {
+    padding: 30px 0;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
 }
 
-/* header, .header {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  background: #14291e !important;
-  padding: 0 24px;
-  height: 64px;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 10;
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .ctaButton {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+  
+  .usersCount {
+    font-size: 0.9rem;
+  }
 }
-
-.logo {
-  height: 40px;
-  width: auto;
-}
-
-.headerBar {
-  background: rgba(255,255,255,0.08);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 24px;
-  margin-left: 8px;
-  flex: 1;
-}
-
-.brand {
-  margin-left: 12px;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: -1px;
-  background: transparent;
-} */ 

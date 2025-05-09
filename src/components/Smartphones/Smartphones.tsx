@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Smartphones.module.css';
-import economizaAi1 from '../../assets/economiza-ai-1.png';
-import economizaAi2 from '../../assets/economiza-ai-2.png';
-import economizaAi3 from '../../assets/economiza-ai-3.png';
+import economizaAi1 from '../../assets/economiza-ai-1.svg';
+import economizaAi2 from '../../assets/economiza-ai-2.svg';
+import economizaAi3 from '../../assets/economiza-ai-3.svg';
 
 const Smartphones: React.FC = () => {
   return (

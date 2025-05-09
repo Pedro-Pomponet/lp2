@@ -1,28 +1,31 @@
 import React from 'react';
 import styles from './Testimonials.module.css';
+import pedro from '../../assets/pedro.png';
+import julia from '../../assets/julia.png';
+import joao from '../../assets/joao.png';
 
 const testimonials = [
   {
-    name: "Jéssica Caroline",
-    role: "Engenheira de Dados Sênior",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "O Economizap revolucionou a forma como gerencio as finanças do meu negócio. É simples, rápido e muito eficiente!",
+    name: "Pedro Henrique",
+    role: "Analista de Sistemas",
+    avatar: pedro,
+    text: "Eu sempre fui péssimo pra anotar os gastos... até começar a usar o EconomiZap. Hoje, controlo tudo direto no WhatsApp e consigo ver certinho pra onde meu dinheiro tá indo. Finalmente tô conseguindo juntar uma grana no fim do mês.",
     rating: 5
   },
   {
-    name: "Eduardo Alves",
-    role: "Estagiário",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Eu costumava esquecer de registrar meus gastos, mas com o Economizap, consigo adicionar tudo direto pelo WhatsApp enquanto estou na rua. A categorização automática é uma mão na roda para manter meu controle de dia.",
+    name: "Julia Izana",
+    role: "Empreendedora",
+    avatar: julia,
+    text: "Facilitou demais minha vida! Eu só mando mensagem com o valor e o que gastei, e pronto, já fica registrado. É como ter um assistente financeiro no bolso. Economizei quase R$500 no primeiro mês só por ter mais noção dos meus gastos.",
     rating: 5
   },
   {
-    name: "Kesia Bizerra",
-    role: "Estudante de Direito",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-    text: "Ótimo sistema, facilita muito no controle de gastos!",
+    name: "João Victor",
+    role: "Designer Gráfico",
+    avatar: joao,
+    text: "Já testei vários apps de finanças, mas sempre desistia. O EconomiZap é o único que consegui manter, porque funciona no WhatsApp, que eu já uso todo dia. Simples, rápido e direto ao ponto.",
     rating: 5
-  },
+  }
 ];
 
 const Testimonials: React.FC = () => (
