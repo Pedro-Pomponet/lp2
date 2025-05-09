@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './CallToAction.module.css';
+import header from '../../assets/images/header.PNG';
 
 const CallToAction: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const CallToAction: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <img 
-            src="/images/header.PNG" 
+            src={header} 
             alt="Pessoa usando o EconomiZap no celular" 
             className={styles.image} 
           />
