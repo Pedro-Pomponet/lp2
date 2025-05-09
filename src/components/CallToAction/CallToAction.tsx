@@ -7,7 +7,7 @@ const CallToAction: React.FC = () => {
     <section className={styles.ctaSection}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
-          <img src={header} alt="Pessoa usando o EconomiZap no celular" className={styles.image} />
+          <img src="/images/header.PNG" alt="Pessoa usando o EconomiZap no celular" className={styles.image} />
         </div>
         
         <div className={styles.ctaContent}>
