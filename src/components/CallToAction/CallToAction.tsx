@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './CallToAction.module.css';
-import header from '../../images/header.PNG';
 
 const CallToAction: React.FC = () => {
   return (
     <section className={styles.ctaSection}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
-          <img src="/images/header.PNG" alt="Pessoa usando o EconomiZap no celular" className={styles.image} />
+          <img 
+            src="/images/header.PNG" 
+            alt="Pessoa usando o EconomiZap no celular" 
+            className={styles.image} 
+          />
         </div>
         
         <div className={styles.ctaContent}>
