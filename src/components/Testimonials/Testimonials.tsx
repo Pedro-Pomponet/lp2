@@ -30,6 +30,7 @@ const testimonials = [
 
 const Testimonials: React.FC = () => (
   <section className={styles.testimonials}>
+    <h2 className={styles.sectionTitle}>O Que Nossos Usuários Dizem</h2>
     <div className={styles.cards}>
       {testimonials.map((t, i) => (
         <div className={styles.card} key={i}>

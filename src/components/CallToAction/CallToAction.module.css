@@ -1,31 +1,34 @@
 .ctaSection {
-  background-color: #f2efe8;
+  background: #F7F3EA;
   padding: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
 }
 
 .container {
-  width: 100%;
-  max-width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 0;
 }
 
 .imageContainer {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
   position: relative;
-  width: 800px;
-  margin-top: -200px;
-  margin-bottom: 40px;
-  z-index: 3;
-  transform: translateX(200px);
+  margin-bottom: -4px;
 }
 
 .image {
@@ -40,6 +43,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background: #F7F3EA;
+  padding: 0 20px;
+  position: relative;
 }
 
 .ctaButton {
@@ -53,9 +59,10 @@
   text-decoration: none;
   padding: 20px 40px;
   border-radius: 100px;
-  margin-bottom: 0;
+  margin-bottom: 32px;
   transition: background-color 0.3s ease;
   box-shadow: 0 6px 16px rgba(14, 108, 61, 0.4);
+  border: 2px solid #F7F3EA;
 }
 
 .ctaButton:hover {
@@ -83,26 +90,22 @@
 
 @media (max-width: 768px) {
   .ctaSection {
-    padding: 0;
+    margin-top: -40px;
   }
 
   .imageContainer {
-    width: 500px;
-    transform: translateX(0);
-    margin-top: -150px;
+    top: -60px;
+    margin-bottom: -60px;
   }
 }
 
 @media (max-width: 480px) {
   .ctaSection {
-    padding: 0;
+    margin-top: -30px;
   }
 
   .imageContainer {
-    width: 280px;
-    transform: none;
-    margin-top: -180px;
-    margin-bottom: 0;
+    max-width: 280px;
   }
   
   .container {
@@ -112,6 +115,9 @@
   .ctaButton {
     width: 300px;
     max-width: 100%;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    margin-bottom: 24px;
   }
   
   .whatsappIcon svg {
@@ -121,5 +127,11 @@
   
   .usersCount {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .ctaSection {
+    display: none;
   }
 } 

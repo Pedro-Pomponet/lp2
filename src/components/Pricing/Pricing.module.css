@@ -1,28 +1,144 @@
 .pricing {
-  background: #f2efe8;
+  background: #F7F3EA;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header, .logo, .header h1 {
-  display: none;
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #23263A;
+  margin: 0;
 }
 
 .startNow {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
   color: #23263A;
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .pricingGrid {
-  max-width: 600px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  max-width: 800px;
+}
+
+.planCard {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.planLabel {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0e6c3d;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.popularLabel {
+  background: #23263A;
+}
+
+.price {
+  font-size: 2.4rem;
+  color: #23263A;
+  margin: 24px 0 8px;
+}
+
+.period {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.equivalent {
+  color: #0e6c3d;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.monthlyBtn, .annualBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.monthlyBtn {
+  background: #0e6c3d;
+  color: white;
+}
+
+.annualBtn {
+  background: #23263A;
+  color: white;
+}
+
+.security {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .pricingGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planCard {
+    max-width: 100%;
+  }
 }
 
 .benefits {
@@ -60,62 +176,6 @@
   font-size: 1.2rem;
 }
 
-.plans {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.planCard {
-  background: #fff;
-  border-radius: 22px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 4px 24px rgba(60, 60, 60, 0.10);
-  margin: 0 auto;
-  width: 85%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.planLabel {
-  background: #2DBB54;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
-
-.popularLabel {
-  background: #23263A;
-}
-
-.price {
-  font-size: 2.2rem;
-  color: #23263A;
-  font-weight: 700;
-  margin: 16px 0 8px;
-}
-
-.period {
-  font-size: 1rem;
-  color: #666;
-  font-weight: normal;
-}
-
-.equivalent {
-  color: #2DBB54;
-  font-size: 0.9rem;
-  margin: 8px 0 16px;
-}
-
 .rocketIcon {
   width: 18px;
   height: 18px;
@@ -143,35 +203,6 @@
   color: #666;
 }
 
-.monthlyBtn, .annualBtn {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.monthlyBtn:hover, .annualBtn:hover {
-  opacity: 0.9;
-}
-
-.monthlyBtn {
-  background: #2DBB54;
-  color: white;
-}
-
-.annualBtn {
-  background: #23263A;
-  color: white;
-}
-
 .securePayment {
   display: flex;
   align-items: center;
@@ -181,39 +212,76 @@
   margin-top: 20px;
 }
 
-.security {
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #666;
-  font-size: 1rem;
-  opacity: 0.92;
-}
-
-@media (max-width: 480px) {
+@media (min-width: 769px) {
   .pricing {
-    padding: 20px 6px;
+    padding: 80px 0;
   }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .pricingGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+
   .planCard {
-    padding: 18px 6px 16px 6px;
+    flex: 1;
+    max-width: 380px;
+    margin: 0;
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
-  .price {
-    font-size: 1.7rem;
+
+  .brandHeader {
+    display: none;
   }
-  .plans {
-    gap: 18px;
+
+  .desktopTitle {
+    display: block;
+    font-size: 2.8rem;
+    color: #23263A;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  .mobileTitle {
+    display: none;
   }
 }
 
-@media (max-width: 600px) {
-  .planCard {
-    width: 90%;
-    padding: 3vh 4vh;
-  }
+/* Mantém os estilos dos ícones */
+.rocketIcon,
+.cardIcon,
+.crownIcon,
+.shieldIcon {
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  fill: currentColor;
 }
 
-/* Ajustes para os SVGs */
 .rocketIcon path,
 .cardIcon path,
 .crownIcon path,
@@ -225,4 +293,63 @@
 .startNow span {
   margin-left: 2px;
   display: inline-block;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.brandLogo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  top: 4px;
+}
+
+.brandName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23263A;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+
+/* Esconde o título desktop no mobile */
+.mobileTitle {
+  display: block;
+}
+
+.desktopTitle {
+  display: none;
+}
+
+/* Container do título desktop */
+.desktopTitleContainer {
+  display: none; /* Escondido por padrão (mobile) */
+}
+
+.desktopTitleContainer h2 {
+  font-size: 2.8rem;
+  color: #23263A;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Media query para desktop */
+@media (min-width: 769px) {
+  .desktopTitleContainer {
+    display: block; /* Mostra apenas no desktop */
+    width: 100%;
+    margin-bottom: 20px;
+  }
 } 

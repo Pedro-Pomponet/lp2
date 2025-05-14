@@ -7,6 +7,7 @@ import economizaAi3 from '../../assets/economiza-ai-3.svg';
 const Smartphones: React.FC = () => {
   return (
     <section className={styles.smartphones}>
+      <h2 className={styles.sectionTitle}>Disponível em Todos os Dispositivos</h2>
       <div className={styles.container}>
         <div className={styles.phoneContainer}>
           <div className={styles.phone}>
