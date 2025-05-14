@@ -20,7 +20,7 @@ const Pricing: React.FC = () => {
         </div>
 
         <div className={styles.startNow}>
-          <RocketIcon className={styles.rocketIcon} />
+          <RocketIcon />
           <span>Comece imediatamente</span>
         </div>
 
@@ -31,7 +31,7 @@ const Pricing: React.FC = () => {
               R$ 14,90<span className={styles.period}>/mês</span>
             </h2>
             <button className={styles.monthlyBtn}>
-              <CreditCardIcon className={styles.cardIcon} />
+              <CreditCardIcon />
               Assinar Plano Mensal
             </button>
           </div>
@@ -43,14 +43,14 @@ const Pricing: React.FC = () => {
             </h2>
             <div className={styles.equivalent}>Equivalente a R$ 10,00/mês</div>
             <button className={styles.annualBtn}>
-              <CrownIcon className={styles.crownIcon} />
+              <CrownIcon />
               Assinar Plano Anual
             </button>
           </div>
         </div>
 
         <div className={styles.security}>
-          <ShieldIcon className={styles.shieldIcon} />
+          <ShieldIcon />
           Pagamento 100% seguro
         </div>
       </div>
