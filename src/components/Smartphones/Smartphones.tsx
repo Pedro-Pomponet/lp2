@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Smartphones.module.css';
-import { Images } from '../../assets';
+import Images from '../../assets';
 import SafeImage from '../SafeImage/SafeImage';
 
 const Smartphones: React.FC = () => {
@@ -22,7 +22,7 @@ const Smartphones: React.FC = () => {
             <SafeImage 
               src={Images.economizaAi.painel} 
               alt="Painel profissional" 
-              loading="lazy" 
+              className={styles.phoneImage}
             />
           </div>
 
@@ -32,6 +32,7 @@ const Smartphones: React.FC = () => {
             <SafeImage 
               src={Images.economizaAi.transacoes} 
               alt="Visualize Tabela de Transações" 
+              className={styles.phoneImage}
             />
           </div>
 
@@ -41,6 +42,7 @@ const Smartphones: React.FC = () => {
             <SafeImage 
               src={Images.economizaAi.correcao} 
               alt="Corrigir é rapidinho" 
+              className={styles.phoneImage}
             />
           </div>
         </div>

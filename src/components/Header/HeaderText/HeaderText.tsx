@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HeaderText.module.css';
-import { Images } from '../../../assets';
-import SafeImage from '../../SafeImage/SafeImage';
+import Images from '../../../assets';
+import { WhatsAppIcon } from '../../Icons';
 
 const HeaderText: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const HeaderText: React.FC = () => {
 
       <a href="#pricing" className={styles.button}>
         <span className={styles.whatsappIcon}>
-          <SafeImage src={Images.whatsapp} alt="WhatsApp" />
+          <WhatsAppIcon size={24} />
         </span>
         Começar Agora
       </a>

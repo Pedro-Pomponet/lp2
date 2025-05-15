@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HeaderImage.module.css';
-import { Images } from '../../../assets';
+import Images from '../../../assets';
 import SafeImage from '../../SafeImage/SafeImage';
 
 const HeaderImage: React.FC = () => {
