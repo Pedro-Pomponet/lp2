@@ -7,6 +7,11 @@ import economizaAi3 from './economiza-ai-3.png';
 import pedro from './pedro.png';
 import julia from './julia.png';
 import joao from './joao.png';
+// Novos ícones
+import creditCard from './icons/credit-card.png';
+import crown from './icons/crown.png';
+import rocket from './icons/rocket.png';
+import shield from './icons/shield.png';
 
 const Images = {
   header: headerImage,
@@ -20,6 +25,12 @@ const Images = {
     pedro,
     julia,
     joao
+  },
+  icons: {
+    creditCard,
+    crown,
+    rocket,
+    shield
   }
 } as const;
 

@@ -138,10 +138,10 @@
 }
 
 .cardIcon {
-  width: 16px !important;
-  height: 16px !important;
-  color: #ffffff;
-  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+  background: currentColor;
+  /* Adicione mais estilos para formar o ícone desejado */
 }
 
 .crownIcon {
@@ -230,4 +230,15 @@
     width: 14px;
     height: 14px;
   }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.monthlyBtn .icon,
+.annualBtn .icon {
+  filter: brightness(0) invert(1); /* Torna os ícones brancos */
 }

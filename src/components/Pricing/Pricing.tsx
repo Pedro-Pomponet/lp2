@@ -1,9 +1,6 @@
 import React from 'react';
 import styles from './Pricing.module.css';
-import { ReactComponent as RocketIcon } from '../../assets/icons/rocket.svg';
-import { ReactComponent as CreditCardIcon } from '../../assets/icons/credit-card.svg';
-import { ReactComponent as CrownIcon } from '../../assets/icons/crown.svg';
-import { ReactComponent as ShieldIcon } from '../../assets/icons/shield.svg';
+import Images from '../../assets';
 
 const Pricing: React.FC = () => {
   return (
@@ -15,7 +12,7 @@ const Pricing: React.FC = () => {
 
         <div className={styles.startNow}>
           <span className={`${styles.iconWrapper} ${styles.rocketIcon}`}>
-            <RocketIcon />
+            <img src={Images.icons.rocket} alt="" className={styles.icon} />
           </span>
           <span>Comece imediatamente</span>
         </div>
@@ -28,7 +25,7 @@ const Pricing: React.FC = () => {
             </h2>
             <button className={styles.monthlyBtn}>
               <span className={styles.iconWrapper}>
-                <CreditCardIcon />
+                <img src={Images.icons.creditCard} alt="" className={styles.icon} />
               </span>
               Assinar Plano Mensal
             </button>
@@ -42,7 +39,7 @@ const Pricing: React.FC = () => {
             <div className={styles.equivalent}>Equivalente a R$ 10,00/mês</div>
             <button className={styles.annualBtn}>
               <span className={styles.iconWrapper}>
-                <CrownIcon />
+                <img src={Images.icons.crown} alt="" className={styles.icon} />
               </span>
               Assinar Plano Anual
             </button>
@@ -51,7 +48,7 @@ const Pricing: React.FC = () => {
 
         <div className={styles.security}>
           <span className={styles.iconWrapper}>
-            <ShieldIcon />
+            <img src={Images.icons.shield} alt="" className={styles.icon} />
           </span>
           Pagamento 100% seguro
         </div>
