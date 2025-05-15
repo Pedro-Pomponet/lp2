@@ -15,11 +15,11 @@ const HeaderText: React.FC = () => {
         Chega de planilhas! Com o EconomiZap, você fala, e a mágica acontece: gastos anotados, organizados e analisados – tudo pelo zap.
       </p>
 
-      <a href="#" className={styles.button}>
+      <a href="#pricing" className={styles.button}>
         <span className={styles.whatsappIcon}>
           <img src={whatsappIcon} alt="WhatsApp" />
         </span>
-        Começar agora
+        Começar Agora
       </a>
     </div>
   );

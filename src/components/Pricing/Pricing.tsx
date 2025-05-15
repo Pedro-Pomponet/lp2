@@ -4,23 +4,19 @@ import { ReactComponent as RocketIcon } from '../../assets/icons/rocket.svg';
 import { ReactComponent as CreditCardIcon } from '../../assets/icons/credit-card.svg';
 import { ReactComponent as CrownIcon } from '../../assets/icons/crown.svg';
 import { ReactComponent as ShieldIcon } from '../../assets/icons/shield.svg';
-import logo from '../../assets/logo.png';
 
 const Pricing: React.FC = () => {
   return (
-    <section className={styles.pricing}>
+    <section id="pricing" className={styles.pricing}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <img src={logo} alt="Economizap" className={styles.logo} />
-          <h1>Economizap</h1>
-        </div>
-
         <div className={styles.desktopTitleContainer}>
           <h2>Nossos Planos</h2>
         </div>
 
         <div className={styles.startNow}>
-          <RocketIcon />
+          <span className={`${styles.iconWrapper} ${styles.rocketIcon}`}>
+            <RocketIcon />
+          </span>
           <span>Comece imediatamente</span>
         </div>
 
@@ -31,7 +27,9 @@ const Pricing: React.FC = () => {
               R$ 14,90<span className={styles.period}>/mês</span>
             </h2>
             <button className={styles.monthlyBtn}>
-              <CreditCardIcon />
+              <span className={styles.iconWrapper}>
+                <CreditCardIcon />
+              </span>
               Assinar Plano Mensal
             </button>
           </div>
@@ -43,14 +41,18 @@ const Pricing: React.FC = () => {
             </h2>
             <div className={styles.equivalent}>Equivalente a R$ 10,00/mês</div>
             <button className={styles.annualBtn}>
-              <CrownIcon />
+              <span className={styles.iconWrapper}>
+                <CrownIcon />
+              </span>
               Assinar Plano Anual
             </button>
           </div>
         </div>
 
         <div className={styles.security}>
-          <ShieldIcon />
+          <span className={styles.iconWrapper}>
+            <ShieldIcon />
+          </span>
           Pagamento 100% seguro
         </div>
       </div>
