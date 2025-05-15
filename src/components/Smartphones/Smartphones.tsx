@@ -20,19 +20,19 @@ const Smartphones: React.FC = () => {
               <li>Organização automatizada</li>
               <li>Experiência prática e acessível</li>
             </ul>
-            <img src={economizaAi1} alt="Painel profissional" loading="lazy" />
+            {economizaAi1 && <img src={economizaAi1} alt="Painel profissional" loading="lazy" />}
           </div>
 
           <div className={styles.phone}>
             <h3>Visualize Tabela de Transações</h3>
             <p>Visualize suas gastos de forma organizada e prática na tabela de transações.</p>
-            <img src={economizaAi3} alt="Visualize Tabela de Transações" />
+            {economizaAi3 && <img src={economizaAi3} alt="Visualize Tabela de Transações" />}
           </div>
 
           <div className={styles.phone}>
             <h3>Corrigir é rapidinho 😊</h3>
             <p>Mandou um valor errado? Sem stress. O Economizap já entende rapidinho e atualiza tudo pra você.</p>
-            <img src={economizaAi2} alt="Corrigir é rapidinho" />
+            {economizaAi2 && <img src={economizaAi2} alt="Corrigir é rapidinho" />}
           </div>
         </div>
       </div>

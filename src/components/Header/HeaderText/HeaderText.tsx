@@ -17,7 +17,7 @@ const HeaderText: React.FC = () => {
 
       <a href="#pricing" className={styles.button}>
         <span className={styles.whatsappIcon}>
-          <img src={whatsappIcon} alt="WhatsApp" />
+          {whatsappIcon && <img src={whatsappIcon} alt="WhatsApp" />}
         </span>
         Começar Agora
       </a>
