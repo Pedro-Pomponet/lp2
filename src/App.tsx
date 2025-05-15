@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header/Header';
 import CallToAction from './components/CallToAction/CallToAction';
 import Features from './components/Features/Features';
