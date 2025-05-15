@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './Smartphones.module.css';
-import economizaAi1 from '../../assets/economiza-ai-1.svg';
-import economizaAi2 from '../../assets/economiza-ai-2.svg';
-import economizaAi3 from '../../assets/economiza-ai-3.svg';
+import { Images } from '../../assets';
+import SafeImage from '../SafeImage/SafeImage';
 
 const Smartphones: React.FC = () => {
   return (
@@ -20,19 +19,29 @@ const Smartphones: React.FC = () => {
               <li>Organização automatizada</li>
               <li>Experiência prática e acessível</li>
             </ul>
-            {economizaAi1 && <img src={economizaAi1} alt="Painel profissional" loading="lazy" />}
+            <SafeImage 
+              src={Images.economizaAi.painel} 
+              alt="Painel profissional" 
+              loading="lazy" 
+            />
           </div>
 
           <div className={styles.phone}>
             <h3>Visualize Tabela de Transações</h3>
             <p>Visualize suas gastos de forma organizada e prática na tabela de transações.</p>
-            {economizaAi3 && <img src={economizaAi3} alt="Visualize Tabela de Transações" />}
+            <SafeImage 
+              src={Images.economizaAi.transacoes} 
+              alt="Visualize Tabela de Transações" 
+            />
           </div>
 
           <div className={styles.phone}>
             <h3>Corrigir é rapidinho 😊</h3>
             <p>Mandou um valor errado? Sem stress. O Economizap já entende rapidinho e atualiza tudo pra você.</p>
-            {economizaAi2 && <img src={economizaAi2} alt="Corrigir é rapidinho" />}
+            <SafeImage 
+              src={Images.economizaAi.correcao} 
+              alt="Corrigir é rapidinho" 
+            />
           </div>
         </div>
       </div>

@@ -1,15 +1,13 @@
 /// <reference types="react-scripts" />
 
 declare module '*.svg' {
-  import * as React from 'react';
-  export const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-  const src: string;
-  export default src;
+  const content: string;
+  export default content;
 }
 
 declare module '*.png' {
-  const value: string;
-  export default value;
+  const content: string;
+  export default content;
 }
 
 declare module '*.PNG' {
@@ -18,11 +16,11 @@ declare module '*.PNG' {
 }
 
 declare module '*.jpg' {
-  const value: string;
-  export default value;
+  const content: string;
+  export default content;
 }
 
 declare module '*.jpeg' {
-  const value: string;
-  export default value;
+  const content: string;
+  export default content;
 }
